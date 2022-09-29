@@ -1,0 +1,26 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px 100px;
+
+    ul {
+        display: flex;
+        list-style-type: none;
+
+        li {
+            margin-left: 100px;
+            font-size: 24px;
+
+            &:hover {
+                border-bottom: 1px solid $color-1;
+                /* TODO Modifier le :hover pour définir un trait fixe selon la page ou on se situe(Accueil ou About) */
+            }
+        }
+
+        .logo {
+            width: 210px;
+            height: 68px;
+        }
+    }
+}
