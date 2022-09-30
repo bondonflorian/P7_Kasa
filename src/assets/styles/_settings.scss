@@ -1,14 +1,19 @@
+/* Font */
 @font-face {
     font-family: "Montserrat";
     src: url(../fonts/Montserrat-Medium.ttf);
 }
 
+/* Variable */
 $font: "Montserrat", sans-serif;
 $color-1: #FF6060;
 $color-footer: #000;
 $color-white: #fff;
-$background: #E5E5E5;
+$background: #F6F6F6;
+$margin-page: 40px 100px;
 
+
+/* Paramètre généraux */
 body {
     font-family: $font;
 }

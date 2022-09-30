@@ -4,19 +4,20 @@
     align-items: center;
     color: $color-1;
 
-    h1 {
-        font-size: 288px;
-        margin-bottom: 50px;
-    }
-
-    p {
-        font-size: 36px;
-        margin-bottom: 200px;
-    }
-
-    .notfound-href {
+    &__href {
         margin-bottom: 159px;
         color: $color-1;
         border-bottom: 1px solid $color-1;
     }
+
+    & h1 {
+        font-size: 288px;
+        margin-bottom: 50px;
+    }
+
+    & p {
+        font-size: 36px;
+        margin-bottom: 200px;
+    }
+
 }

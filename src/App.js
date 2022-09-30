@@ -4,14 +4,14 @@ import Notfound from './pages/Notfound';
 import Home from './pages/Home';
 import Housing from './pages/Housing';
 import About from './pages/About';
-import Navigation from './components/Navigation';
+import Header from './components/Header';
 import Footer from './components/Footer';
 
 const App = () => {
   return (
 
     <BrowserRouter>
-      <Navigation />
+      <Header />
       <Routes>
         <Route path="/housing" element={<Housing />} />
         <Route path="/about" element={<About />} />

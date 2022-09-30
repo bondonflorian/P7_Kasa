@@ -1,19 +1,20 @@
 .footer {
     position: relative;
+    /* TODO Voir si il y a une meilleur méthode d'attacher le footer en bas de page */
     bottom: 0;
     background-color: $color-footer;
     color: $color-white;
     width: 100%;
     height: 210px;
-}
 
-.footer-conteners {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+    &__elements {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
-.footer-conteners img {
-    margin: 66px 0;
+    & img {
+        margin: 66px 0;
+    }
 }

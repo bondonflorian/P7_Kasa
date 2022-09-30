@@ -4,11 +4,16 @@
     justify-content: space-between;
     margin: 40px 100px;
 
-    ul {
+    &__logo {
+        width: 210px;
+        height: 68px;
+    }
+
+    & ul {
         display: flex;
         list-style-type: none;
 
-        li {
+        & li {
             margin-left: 100px;
             font-size: 24px;
 
@@ -18,9 +23,5 @@
             }
         }
 
-        .logo {
-            width: 210px;
-            height: 68px;
-        }
     }
 }
