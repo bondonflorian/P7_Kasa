@@ -12,10 +12,7 @@ const Home = () => {
                 <div className="card__location">
                     <h2>Titre de la location</h2>
                 </div>
-                {/* Element temporaire pour la mise en page */}
-                {/*                 <div className="card__location">
-                    <h2>Titre de la location</h2>
-                </div>
+                {/* TODO Element temporaire pour la mise en page */}
                 <div className="card__location">
                     <h2>Titre de la location</h2>
                 </div>
@@ -27,7 +24,10 @@ const Home = () => {
                 </div>
                 <div className="card__location">
                     <h2>Titre de la location</h2>
-                </div> */}
+                </div>
+                <div className="card__location">
+                    <h2>Titre de la location</h2>
+                </div>
             </div>
         </div>
     );

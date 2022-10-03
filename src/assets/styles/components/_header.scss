@@ -18,7 +18,8 @@
             font-size: 24px;
 
             &:hover {
-                border-bottom: 1px solid $color-1;
+                /* border-bottom: 1px solid $color-1; */
+                text-decoration-line: underline;
                 /* TODO Modifier le :hover pour définir un trait fixe selon la page ou on se situe(Accueil ou About) */
             }
         }
