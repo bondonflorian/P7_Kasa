@@ -8,9 +8,16 @@
 $font: "Montserrat", sans-serif;
 $color-1: #FF6060;
 $color-footer: #000;
+$banner: #000;
 $color-white: #fff;
 $background: #F6F6F6;
 $margin-page: 40px 100px;
+
+/* Mixin */
+@mixin flexcenter {
+    display: flex;
+    align-items: center;
+}
 
 
 /* Paramètre généraux */

@@ -1,9 +1,8 @@
 .banner {
-    display: flex;
-    background-color: darken($color-footer, 30%);
+    @include flexcenter;
+    background-color: darken($banner, 30%);
     position: relative;
     justify-content: center;
-    align-items: center;
     height: 223px;
     margin: $margin-page;
     border-radius: 25px;
@@ -24,9 +23,8 @@
 }
 
 .card {
-    display: flex;
+    @include flexcenter;
     justify-content: space-around;
-    align-items: center;
     flex-wrap: wrap;
     background-color: $background;
     padding: 56px 0 0 0;

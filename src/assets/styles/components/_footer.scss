@@ -8,10 +8,9 @@
     height: 210px;
 
     &__elements {
-        display: flex;
+        @include flexcenter;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
     }
 
     & img {
