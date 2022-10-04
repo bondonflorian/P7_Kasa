@@ -1,0 +1,18 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 500px;
+    margin: $margin-page;
+
+    &__title {
+        background: $color-1;
+        border-radius: 5px;
+        width: 100%;
+    }
+
+    & h1 {
+        font-size: 24px;
+        color: $color-white;
+    }
+}
