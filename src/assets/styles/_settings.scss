@@ -19,6 +19,25 @@ $margin-page: 40px 100px;
     align-items: center;
 }
 
+@mixin arrow {
+    color: $color-white;
+    font-size: 28px;
+}
+
+@mixin deroulant {
+    justify-content: space-between;
+    background: $color-1;
+    border-radius: 5px;
+    height: 40px;
+
+}
+
+@mixin description {
+    color: $color-1;
+    font-size: 18px;
+    margin: 30px 25px 30px 15px;
+}
+
 
 /* Paramètre généraux */
 body {
