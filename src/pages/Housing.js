@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaAngleUp } from "react-icons/fa";
+import { FaAngleUp, FaStar } from "react-icons/fa";
 const banner = require("../assets/img/Cozy-loft.png");
 
 const Housing = () => {
@@ -17,15 +17,15 @@ const Housing = () => {
             <div className="housing__filterblock">
                 <div className="housing__filterblock__filter">
                     <p>Cozy</p>
-                </div>
-                <div className="housing__filterblock__filter">
                     <p>Canal</p>
-                </div>
-                <div className="housing__filterblock__filter">
                     <p>Paris 10</p>
                 </div>
                 <div className="housing__filterblock__notice">
-                    {/* TODO Fontawesome à venir ici */}
+                    <FaStar className='star' />
+                    <FaStar className='star' />
+                    <FaStar className='star' />
+                    <FaStar className='star__grey' />
+                    <FaStar className='star__grey' />
                 </div>
             </div>
             <div className="housing__filterblock__details">
