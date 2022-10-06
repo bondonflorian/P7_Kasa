@@ -1,5 +1,5 @@
 import React from 'react';
-const footer = require("../assets/img/logo/logo-footer.png");
+const footer = require("../../assets/img/logo/logo-footer.png");
 
 const Footer = () => {
     return (

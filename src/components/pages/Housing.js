@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaAngleUp, FaStar } from "react-icons/fa";
-const banner = require("../assets/img/Cozy-loft.png");
+const banner = require("../../assets/img/Cozy-loft.png");
 
 const Housing = () => {
     return (
@@ -10,8 +10,10 @@ const Housing = () => {
             </div>
             <div className="housing__title">
                 <h1>Cozy loft on the Canal Saint-Martin</h1>
-                <span>Alexandre Dumas</span>
-                {/* <span className='housing__title__picture'></span> */}
+                <div className='housing__title__autor'>
+                    <p>Alexandre Dumas</p>
+                    <span className='housing__title__picture'></span>
+                </div>
             </div>
             <h3>Paris, Île-de-France</h3>
             <div className="housing__filterblock">

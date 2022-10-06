@@ -18,13 +18,26 @@
         margin-top: 25px;
 
         & h1,
-        span {
+        p {
             color: $color-1;
             margin-bottom: 5px;
         }
 
         &__picture {
+            display: flex;
             background-color: grey;
+            width: 64px;
+            height: 64px;
+            border-radius: 40px;
+        }
+
+        &__autor {
+            display: flex;
+            align-items: center;
+
+            & p {
+                width: 90px;
+            }
         }
     }
 
@@ -60,6 +73,7 @@
         &__details {
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
             align-items: baseline;
             width: 100%;
             margin-top: 20px;
@@ -73,7 +87,7 @@
                     @include flexcenter;
                     @include deroulant;
                     height: 52px;
-                    width: 550px;
+                    width: 600px;
                     padding: 0 25px 0 15px;
 
                     & h2 {
@@ -86,9 +100,12 @@
                     display: flex;
                     flex-direction: column;
                     @include description;
-                    margin-top: 30px;
-                    padding-right: 20px;
+                    margin: 0;
+                    padding: 30px 20px 0 20px;
                     font-size: 17px;
+                    width: 600px;
+                    height: 250px;
+                    background-color: #F6F6F6;
                 }
             }
         }

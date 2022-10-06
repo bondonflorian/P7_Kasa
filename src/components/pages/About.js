@@ -1,10 +1,10 @@
 import React from 'react';
 import { FaAngleUp } from "react-icons/fa";
-const banner = require("../assets/img/background-about.png");
+const banner = require("../../assets/img/background-about.png");
 
 const About = () => {
     return (
-        <div>
+        <section>
             <div className='banner'>
                 <img src={banner} alt="" /> {/* TODO Mettre en place le alt de l'image */}
             </div>
@@ -41,7 +41,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 
