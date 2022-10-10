@@ -1,17 +1,19 @@
 /* Font */
 @font-face {
     font-family: "Montserrat";
-    src: url(../fonts/Montserrat-Medium.ttf);
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
 }
 
 /* Variable */
 $font: "Montserrat", sans-serif;
 $color-1: #FF6060;
+$color-2: #E3E3E3;
 $color-footer: #000;
 $banner: #000;
 $color-white: #fff;
 $background: #F6F6F6;
 $margin-page: 40px 100px;
+$margin-mobile: 0 20px;
 
 /* Mixin */
 @mixin flexcenter {
@@ -38,10 +40,16 @@ $margin-page: 40px 100px;
     margin: 30px 25px 30px 15px;
 }
 
+@mixin mobile {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
 
 /* Paramètre généraux */
 body {
     font-family: $font;
+    font-weight: 300;
 }
 
 li {
