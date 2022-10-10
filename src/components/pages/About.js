@@ -5,7 +5,7 @@ const banner = require("../../assets/img/background-about.png");
 const About = () => {
     return (
         <section>
-            <div className='banner'>
+            <div className='banner-about'>
                 <img src={banner} alt="" /> {/* TODO Mettre en place le alt de l'image */}
             </div>
             <div className="page">

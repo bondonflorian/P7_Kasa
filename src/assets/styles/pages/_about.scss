@@ -4,11 +4,46 @@
     align-items: center;
 }
 
+.banner-about {
+    @include flexcenter;
+    background-color: darken($banner, 30%);
+    position: relative;
+    justify-content: center;
+    height: 200px;
+    margin: $margin-page;
+    border-radius: 25px;
+
+    @include mobile {
+        margin: $margin-mobile;
+        height: 200px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+
+    & img {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        border-radius: 25px;
+        opacity: 70%;
+        object-fit: cover;
+
+        @include mobile {
+            height: 200px;
+            border-radius: 10px;
+        }
+    }
+}
+
 .about {
     @include flexcenter;
     flex-direction: column;
     width: 75%;
     margin-bottom: 50px;
+
+    @include mobile {
+        width: 90%;
+    }
 
     &__title {
         @include flexcenter;
@@ -35,5 +70,9 @@
 
     & p {
         @include description;
+
+        @include mobile {
+            margin-right: 5px;
+        }
     }
 }
