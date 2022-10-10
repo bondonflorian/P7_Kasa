@@ -10,24 +10,27 @@ const Housing = () => {
             </div>
             <div className="housing__title">
                 <h1>Cozy loft on the Canal Saint-Martin</h1>
-                <div className='housing__title__autor'>
-                    <p>Alexandre Dumas</p>
-                    <span className='housing__title__picture'></span>
-                </div>
             </div>
             <h3>Paris, Île-de-France</h3>
+
             <div className="housing__filterblock">
                 <div className="housing__filterblock__filter">
                     <p>Cozy</p>
                     <p>Canal</p>
                     <p>Paris 10</p>
                 </div>
-                <div className="housing__filterblock__notice">
-                    <FaStar className='star' />
-                    <FaStar className='star' />
-                    <FaStar className='star' />
-                    <FaStar className='star__grey' />
-                    <FaStar className='star__grey' />
+                <div className="housing__test">
+                    <div className='housing__title__autor'>
+                        <p>Alexandre Dumas</p>
+                        <span className='housing__title__picture'></span>
+                    </div>
+                    <div className="housing__filterblock__notice">
+                        <FaStar className='star' />
+                        <FaStar className='star' />
+                        <FaStar className='star' />
+                        <FaStar className='star__grey' />
+                        <FaStar className='star__grey' />
+                    </div>
                 </div>
             </div>
             <div className="housing__filterblock__details">
