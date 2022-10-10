@@ -15,5 +15,10 @@
 
     & img {
         margin: 66px 0;
+
+        @include mobile {
+            margin: 20px;
+            padding-top: 50px;
+        }
     }
 }
