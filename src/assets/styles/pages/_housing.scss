@@ -56,7 +56,7 @@
                 width: 32px;
                 height: 32px;
                 top: 10px;
-                left: 60px;
+                left: 115px;
             }
         }
 
@@ -69,7 +69,7 @@
 
                 @include mobile {
                     position: relative;
-                    left: 55px;
+                    left: 110px;
                 }
             }
         }
@@ -116,6 +116,7 @@
         @include mobile {
             flex-direction: column;
             margin-bottom: 80px;
+            align-items: flex-start;
         }
 
         &__filter {
@@ -136,7 +137,6 @@
                 @include mobile {
                     border-radius: 5px;
                     position: relative;
-                    right: 10px;
                 }
             }
         }
@@ -208,7 +208,6 @@
     @include mobile {
         font-size: 18px;
         position: relative;
-        right: 60px;
     }
 
     &__grey {
@@ -219,7 +218,6 @@
         @include mobile {
             font-size: 18px;
             position: relative;
-            right: 60px;
         }
     }
 }
