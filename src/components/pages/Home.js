@@ -19,7 +19,7 @@ const Home = () => {
                         </Link>
                     </div>
                     {/* TODO Element temporaire pour la mise en page */}
-                    <div className="card__location">
+                    {/* <div className="card__location">
                         <Link to="/housing1" >
                             <img src="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg" alt="" />
                             <h2>Titre de la location</h2>
@@ -48,7 +48,7 @@ const Home = () => {
                             <img src="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg" alt="" />
                             <h2>Titre de la location</h2>
                         </Link>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

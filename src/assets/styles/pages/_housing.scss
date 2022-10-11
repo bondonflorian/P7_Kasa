@@ -7,6 +7,7 @@
 
     &__banner {
         display: flex;
+        cursor: pointer;
 
         & img {
             width: 100%;
@@ -21,6 +22,21 @@
                 margin-top: 10px;
                 border-radius: 10px;
             }
+        }
+
+        &__arrowleft {
+            position: absolute;
+            font-size: 100px;
+            top: 250px;
+            color: $color-white;
+        }
+
+        &__arrowright {
+            position: absolute;
+            font-size: 100px;
+            right: 100px;
+            top: 250px;
+            color: $color-white;
         }
     }
 

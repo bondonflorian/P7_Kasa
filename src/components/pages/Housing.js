@@ -1,12 +1,14 @@
 import React from 'react';
-import { FaAngleUp, FaStar } from "react-icons/fa";
+import { FaAngleUp, FaStar, FaAngleLeft, FaAngleRight } from "react-icons/fa";
 const banner = require("../../assets/img/Cozy-loft.png");
 
 const Housing = () => {
     return (
         <div className='housing'>
             <div className="housing__banner">
+                <FaAngleLeft className='housing__banner__arrowleft' />
                 <img src={banner} alt="" /> {/* TODO Préciser le alt de l'image par la suite */}
+                <FaAngleRight className='housing__banner__arrowright' />
             </div>
             <div className="housing__title">
                 <h1>Cozy loft on the Canal Saint-Martin</h1>
