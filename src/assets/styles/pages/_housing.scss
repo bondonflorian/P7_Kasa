@@ -29,6 +29,11 @@
         align-items: center;
         justify-content: space-between;
         margin-top: 25px;
+        width: 75%;
+
+        @include mobile {
+            width: 90%;
+        }
 
         & h1,
         p {
@@ -77,8 +82,7 @@
         font-weight: 300;
     }
 
-    /* TODO Rectifier le nom de la classe */
-    &__test {
+    &__user {
         display: flex;
         flex-direction: column;
         align-items: center;

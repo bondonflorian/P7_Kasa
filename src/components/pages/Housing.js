@@ -19,7 +19,7 @@ const Housing = () => {
                     <p>Canal</p>
                     <p>Paris 10</p>
                 </div>
-                <div className="housing__test">
+                <div className="housing__user">
                     <div className='housing__title__autor'>
                         <p>Alexandre Dumas</p>
                         <span className='housing__title__picture'></span>
