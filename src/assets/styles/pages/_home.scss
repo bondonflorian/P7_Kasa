@@ -35,7 +35,7 @@
 
         @include mobile {
             font-size: 22px;
-            padding-right: 160px;
+            padding-right: 140px;
             padding-left: 10px;
         }
     }
@@ -64,7 +64,8 @@
         margin: 25px;
 
         @include mobile {
-            width: 350px;
+            /* width: 350px; */
+            width: 100%;
             height: 255px;
             margin: 10px 0;
         }
