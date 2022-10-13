@@ -1,7 +1,7 @@
 .footer {
     position: relative;
     /* TODO Voir si il y a une meilleur méthode d'attacher le footer en bas de page */
-    bottom: 0;
+    bottom: 0px;
     background-color: $color-footer;
     color: $color-white;
     width: 100%;

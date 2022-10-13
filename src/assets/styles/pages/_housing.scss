@@ -29,6 +29,11 @@
             font-size: 100px;
             top: 250px;
             color: $color-white;
+
+            @include mobile {
+                font-size: 50px;
+                top: 190px;
+            }
         }
 
         &__arrowright {
@@ -37,6 +42,12 @@
             right: 100px;
             top: 250px;
             color: $color-white;
+
+            @include mobile {
+                font-size: 50px;
+                top: 190px;
+                right: 20px;
+            }
         }
     }
 

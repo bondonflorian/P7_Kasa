@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useParams } from 'react-router-dom';
 import { FaAngleUp, FaStar, FaAngleLeft, FaAngleRight } from "react-icons/fa";
 const banner = require("../../assets/img/Cozy-loft.png");
 
 const Housing = () => {
+
+    const [idlogement, setIdlogement] = useState(useParams('id'));
+
     return (
         <div className='housing'>
             <div className="housing__banner">
@@ -11,7 +15,7 @@ const Housing = () => {
                 <FaAngleRight className='housing__banner__arrowright' />
             </div>
             <div className="housing__title">
-                <h1>Cozy loft on the Canal Saint-Martin</h1>
+                <h1>{idlogement.id}</h1>
             </div>
             <h3>Paris, Île-de-France</h3>
 
