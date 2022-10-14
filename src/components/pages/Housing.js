@@ -1,11 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { FaAngleUp, FaStar, FaAngleLeft, FaAngleRight } from "react-icons/fa";
 const banner = require("../../assets/img/Cozy-loft.png");
 
 const Housing = () => {
 
-    const [idlogement, setIdlogement] = useState(useParams('id'));
+    const [idlogement] = useState(useParams('id'));
+    const [data, setData] = useState([]);
+    const numbers = [1, 2, 3, 4, 5];
+
+    useEffect(() => {
+        fetch("logements.json"
+            , {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                }
+            })
+            .then(function (response) {
+                return response.json();
+            })
+            .then((data) => {
+                data.map((apartment) => {
+                    if (apartment.id === idlogement.id) {
+                        setData(apartment);
+                    }
+                })
+            });
+    }, [])
 
     return (
         <div className='housing'>
@@ -15,27 +37,23 @@ const Housing = () => {
                 <FaAngleRight className='housing__banner__arrowright' />
             </div>
             <div className="housing__title">
-                <h1>{idlogement.id}</h1>
+                <h1>{data.title}</h1>
             </div>
-            <h3>Paris, Île-de-France</h3>
-
+            <h3>{data.location}</h3>
             <div className="housing__filterblock">
                 <div className="housing__filterblock__filter">
-                    <p>Cozy</p>
-                    <p>Canal</p>
-                    <p>Paris 10</p>
+                    {data.tags?.map((res) => (
+                        <p key={res.toString()}>{res}</p>
+                    ))}
                 </div>
                 <div className="housing__user">
                     <div className='housing__title__autor'>
-                        <p>Alexandre Dumas</p>
-                        <span className='housing__title__picture'></span>
+                        <p>{data.host?.name}</p>
+                        <img src={data.host?.picture} className='housing__title__picture'></img>
                     </div>
                     <div className="housing__filterblock__notice">
-                        <FaStar className='star' />
-                        <FaStar className='star' />
-                        <FaStar className='star' />
-                        <FaStar className='star__grey' />
-                        <FaStar className='star__grey' />
+                        {Array.from({ length: parseInt(data.rating) }, (v, index) => <FaStar className="star" key={'colored-' + index} />)}
+                        {Array.from({ length: 5 - parseInt(data.rating) }, (v, index) => <FaStar className="star__grey" key={'empty-' + index} />)}
                     </div>
                 </div>
             </div>
@@ -46,7 +64,7 @@ const Housing = () => {
                         <FaAngleUp className='housing__arrow' />
                     </div>
                     <div className="housing__filterblock__details__description__text">
-                        <p>Vous serez à 50m du canal Saint-martin où vous pourrez pique-niquer l'été et à côté de nombreux bars et restaurants. Au cœur de Paris avec 5 lignes de métro et de nombreux bus. Logement parfait pour les voyageurs en solo et les voyageurs d'affaires. Vous êtes à1 station de la gare de l'est (7 minutes à pied). </p>
+                        <p>{data.description}</p>
                     </div>
                 </div>
                 <div className="housing__filterblock__details__description">
@@ -55,17 +73,12 @@ const Housing = () => {
                         <FaAngleUp className='housing__arrow' />
                     </div>
                     <div className="housing__filterblock__details__description__text">
-                        <p>Climatisation</p>
-                        <p>Wi-Fi</p>
-                        <p>Cuisine</p>
-                        <p>Espace de travail</p>
-                        <p>Fer à repasser</p>
-                        <p>Sèche-cheveux</p>
-                        <p>Cintres</p>
+                        {data.equipments?.map((res) => (
+                            <p key={res.toString()}>{res}</p>
+                        ))}
                     </div>
                 </div>
             </div>
-
         </div>
     );
 };
