@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import { FaAngleUp, FaStar, FaAngleLeft, FaAngleRight } from "react-icons/fa";
-const banner = require("../../assets/img/Cozy-loft.png");
+import { useNavigate, useParams } from 'react-router-dom';
+import { FaAngleUp, FaStar } from "react-icons/fa";
+import ImageSlider from '../layout/ImageSlider';
 
 const Housing = () => {
 
     const [idlogement] = useState(useParams('id'));
     const [data, setData] = useState([]);
-    const numbers = [1, 2, 3, 4, 5];
+    const navigate = useNavigate();
 
     useEffect(() => {
         fetch("logements.json"
@@ -21,21 +21,15 @@ const Housing = () => {
                 return response.json();
             })
             .then((data) => {
-                data.map((apartment) => {
-                    if (apartment.id === idlogement.id) {
-                        setData(apartment);
-                    }
-                })
-            });
-    }, [])
+                data.map((apartment) => (
+                    apartment.id === idlogement.id ? setData(apartment) : ""
+                ))
+            })
+    }, [data, idlogement.id, navigate])
 
     return (
         <div className='housing'>
-            <div className="housing__banner">
-                <FaAngleLeft className='housing__banner__arrowleft' />
-                <img src={banner} alt="" /> {/* TODO Préciser le alt de l'image par la suite */}
-                <FaAngleRight className='housing__banner__arrowright' />
-            </div>
+            {<ImageSlider />}
             <div className="housing__title">
                 <h1>{data.title}</h1>
             </div>
@@ -49,7 +43,7 @@ const Housing = () => {
                 <div className="housing__user">
                     <div className='housing__title__autor'>
                         <p>{data.host?.name}</p>
-                        <img src={data.host?.picture} className='housing__title__picture'></img>
+                        <img src={data.host?.picture} alt={data.host?.name} className='housing__title__picture'></img>
                     </div>
                     <div className="housing__filterblock__notice">
                         {Array.from({ length: parseInt(data.rating) }, (v, index) => <FaStar className="star" key={'colored-' + index} />)}
