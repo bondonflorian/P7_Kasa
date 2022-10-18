@@ -46,6 +46,23 @@ $margin-mobile: 0 20px;
     }
 }
 
+@mixin collapseClose {
+    max-height: 0;
+    width: 100%;
+    margin-bottom: 30px;
+    overflow: hidden;
+    transition: all 0.4s linear;
+}
+
+@mixin collapseOpen {
+    background-color: #F6F6F6;
+    max-height: 200px;
+    height: auto;
+    width: 100%;
+    margin-bottom: 30px;
+    transition: all 0.4s linear;
+}
+
 /* Paramètre généraux */
 body {
     font-family: $font;

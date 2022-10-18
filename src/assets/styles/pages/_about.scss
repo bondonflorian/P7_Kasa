@@ -55,9 +55,11 @@
     }
 
     &__description {
-        background-color: #F6F6F6;
-        width: 100%;
-        margin-bottom: 30px;
+        @include collapseClose;
+
+        &__show {
+            @include collapseOpen;
+        }
     }
 
     & h1 {
@@ -72,6 +74,7 @@
 
     & p {
         @include description;
+        padding: 0 20px 0 0;
 
         @include mobile {
             margin-right: 5px;

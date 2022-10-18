@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { FaAngleUp, FaStar } from "react-icons/fa";
+import { FaAngleUp, FaStar, FaAngleDown } from "react-icons/fa";
+import Collapse from 'react-collapse';
 import ImageSlider from '../layout/ImageSlider';
 
 const Housing = () => {
 
     const [idlogement] = useState(useParams('id'));
     const [data, setData] = useState([]);
+    const [collapse1, setCollapse1] = useState(false);
+    const [collapse2, setCollapse2] = useState(false);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -26,6 +29,7 @@ const Housing = () => {
                 ))
             })
     }, [data, idlogement.id, navigate])
+
 
     return (
         <div className='housing'>
@@ -53,23 +57,27 @@ const Housing = () => {
             </div>
             <div className="housing__filterblock__details">
                 <div className="housing__filterblock__details__description">
-                    <div className="housing__filterblock__details__description__title">
+                    <div className="housing__filterblock__details__description__title" onClick={() => setCollapse1(!collapse1)}>
                         <h2>Description</h2>
-                        <FaAngleUp className='housing__arrow' />
+                        {(collapse1 ? <FaAngleUp className='housing__arrow' /> : <FaAngleDown className='about__arrow' />)}
                     </div>
-                    <div className="housing__filterblock__details__description__text">
-                        <p>{data.description}</p>
+                    <div className={(collapse1 ? "housing__filterblock__details__description__text" : "housing__filterblock__details__description__text__show")}>
+                        <Collapse isOpened={!collapse1}>
+                            <p>{data.description}</p>
+                        </Collapse>
                     </div>
                 </div>
                 <div className="housing__filterblock__details__description">
-                    <div className="housing__filterblock__details__description__title">
+                    <div className="housing__filterblock__details__description__title" onClick={() => setCollapse2(!collapse2)}>
                         <h2>Equipements</h2>
-                        <FaAngleUp className='housing__arrow' />
+                        {(collapse2 ? <FaAngleUp className='housing__arrow' /> : <FaAngleDown className='about__arrow' />)}
                     </div>
-                    <div className="housing__filterblock__details__description__text">
-                        {data.equipments?.map((res) => (
-                            <p key={res.toString()}>{res}</p>
-                        ))}
+                    <div className={(collapse2 ? "housing__filterblock__details__description__text" : "housing__filterblock__details__description__text__show")}>
+                        <Collapse isOpened={!collapse2}>
+                            {data.equipments?.map((res) => (
+                                <p key={res.toString()}>{res}</p>
+                            ))}
+                        </Collapse>
                     </div>
                 </div>
             </div>
