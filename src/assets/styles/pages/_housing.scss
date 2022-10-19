@@ -81,6 +81,10 @@
 
             &__hidden {
                 margin-bottom: 26px;
+
+                @include mobile {
+                    margin-bottom: 19px;
+                }
             }
         }
     }
