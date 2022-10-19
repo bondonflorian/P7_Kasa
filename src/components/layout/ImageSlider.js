@@ -37,12 +37,23 @@ const ImageSlider = () => {
         setCurrentIndex(newIndex);
     };
 
+    const goToSlide = (slideIndex) => {
+        setCurrentIndex(slideIndex);
+    };
+
     return (
         <>
             <div className="housing__banner">
-                <FaAngleLeft onClick={goToPrevious} className='housing__banner__arrowleft' />
-                <FaAngleRight onClick={goToNext} className='housing__banner__arrowright' />
+                {data.length <= 1 ? "" : <FaAngleLeft onClick={goToPrevious} className='housing__banner__arrowleft' />}
+                {data.length <= 1 ? "" : <FaAngleRight onClick={goToNext} className='housing__banner__arrowright' />}
                 <img src={data?.[currentIndex]} key={data.length} alt={data.length} />
+                {data.length <= 1 ? "" : <p>{currentIndex + 1}/{data.length}</p>}
+
+            </div>
+            <div className="housing__banner__bulletpoint">
+                {data.map((key, slideIndex) => (
+                    data.length <= 1 ? <span className="housing__banner__bulletpoint__hidden"></span> : <span key={slideIndex} onClick={() => goToSlide(slideIndex)}>●</span>
+                ))}
             </div>
         </>
     );

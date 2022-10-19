@@ -10,7 +10,7 @@ const Housing = () => {
     const [data, setData] = useState([]);
     const [collapse1, setCollapse1] = useState(false);
     const [collapse2, setCollapse2] = useState(false);
-    const navigate = useNavigate();
+    const navigate = useNavigate(false);
 
     useEffect(() => {
         fetch("logements.json"
@@ -28,8 +28,7 @@ const Housing = () => {
                     apartment.id === idlogement.id ? setData(apartment) : ""
                 ))
             })
-    }, [data, idlogement.id, navigate])
-
+    }, [data, idlogement.id])
 
     return (
         <div className='housing'>
@@ -59,10 +58,10 @@ const Housing = () => {
                 <div className="housing__filterblock__details__description">
                     <div className="housing__filterblock__details__description__title" onClick={() => setCollapse1(!collapse1)}>
                         <h2>Description</h2>
-                        {(collapse1 ? <FaAngleUp className='housing__arrow' /> : <FaAngleDown className='about__arrow' />)}
+                        {(!collapse1 ? <FaAngleUp className='housing__arrow' /> : <FaAngleDown className='about__arrow' />)}
                     </div>
-                    <div className={(collapse1 ? "housing__filterblock__details__description__text" : "housing__filterblock__details__description__text__show")}>
-                        <Collapse isOpened={!collapse1}>
+                    <div className={(collapse1 ? "housing__filterblock__details__description__text__show" : "housing__filterblock__details__description__text")}>
+                        <Collapse isOpened={collapse1}>
                             <p>{data.description}</p>
                         </Collapse>
                     </div>
@@ -70,10 +69,10 @@ const Housing = () => {
                 <div className="housing__filterblock__details__description">
                     <div className="housing__filterblock__details__description__title" onClick={() => setCollapse2(!collapse2)}>
                         <h2>Equipements</h2>
-                        {(collapse2 ? <FaAngleUp className='housing__arrow' /> : <FaAngleDown className='about__arrow' />)}
+                        {(!collapse2 ? <FaAngleUp className='housing__arrow' /> : <FaAngleDown className='about__arrow' />)}
                     </div>
-                    <div className={(collapse2 ? "housing__filterblock__details__description__text" : "housing__filterblock__details__description__text__show")}>
-                        <Collapse isOpened={!collapse2}>
+                    <div className={(collapse2 ? "housing__filterblock__details__description__text__show" : "housing__filterblock__details__description__text")}>
+                        <Collapse isOpened={collapse2}>
                             {data.equipments?.map((res) => (
                                 <p key={res.toString()}>{res}</p>
                             ))}
