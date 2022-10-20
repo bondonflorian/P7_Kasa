@@ -14,7 +14,7 @@ const About = () => {
     return (
         <section>
             <div className='banner-about'>
-                <img src={banner} alt="" /> {/* TODO Mettre en place le alt de l'image */}
+                <img src={banner} alt="Bannière de la page a propos" />
             </div>
             <div className="page">
                 <div className="about">

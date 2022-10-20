@@ -26,7 +26,7 @@ const Home = () => {
     return (
         <div>
             <div className='banner'>
-                <img src={banner} alt="" /> {/* TODO Mettre en place le alt de l'image */}
+                <img src={banner} alt="Chez vous, partout et ailleurs" />
                 <p>Chez vous, partout et ailleurs</p>
             </div>
             <div className="card">
@@ -34,7 +34,7 @@ const Home = () => {
                     {data.map((item) => (
                         <div className="card__location" key={item.id}>
                             <Link to={"/housing-" + item.id} >
-                                <img src={item.cover} alt="" />
+                                <img src={item.cover} alt={item.title} />
                                 <h2>{item.title}</h2>
                             </Link>
                         </div>

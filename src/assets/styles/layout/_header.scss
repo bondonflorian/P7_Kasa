@@ -15,15 +15,17 @@
             width: 130px;
             height: 40px;
         }
-    }
 
-    & ul {
-        display: flex;
-        list-style-type: none;
-
-        & li {
+        &__nav {
             margin-left: 100px;
             font-size: 18px;
+
+            &__selected {
+                text-decoration-line: underline;
+                font-size: 18px;
+                margin-left: 100px;
+                color: $color-1;
+            }
 
             @include mobile {
                 margin: 0 0 0 15px;
@@ -31,11 +33,14 @@
                 text-transform: uppercase;
             }
 
-            &:hover {
+            /*             &:hover {
                 text-decoration-line: underline;
-                /* TODO Modifier le :hover pour définir un trait fixe selon la page ou on se situe(Accueil ou About) */
-            }
+            } */
         }
+    }
 
+    & ul {
+        display: flex;
+        list-style-type: none;
     }
 }

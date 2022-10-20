@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <footer className='footer'>
             <div className='footer__elements'>
-                <img src={footer} alt="" /> {/* TODO Définir le alt */}
+                <img src={footer} alt="Kasa" />
                 <p>© 2020 Kasa. All rights reserved</p>
             </div>
         </footer>

@@ -61,6 +61,7 @@
         flex-wrap: wrap;
         justify-content: space-between;
         width: 90%;
+        /* TODO Régler le problème de mise en page lié à space-between */
     }
 
     &__location {
@@ -89,11 +90,10 @@
 
     & h2 {
         position: relative;
-        /* color: $color-white; */
-        /* TODO Changement de couleur volontaire pour une meilleur visibilité */
         color: $color-white;
-        bottom: 40px;
+        bottom: 50px;
         margin-left: 10px;
+        margin-right: 80px;
         font-size: 18px;
         font-weight: 300;
 
