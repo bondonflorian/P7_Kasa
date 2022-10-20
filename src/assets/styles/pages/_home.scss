@@ -58,7 +58,7 @@
 
     &__all {
         display: flex;
-        flex-wrap: wrap;
+        flex-flow: wrap;
         justify-content: space-between;
         width: 90%;
         /* TODO Régler le problème de mise en page lié à space-between */
