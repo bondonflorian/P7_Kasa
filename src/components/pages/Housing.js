@@ -27,7 +27,8 @@ const Housing = () => {
                 const dataid = data.find(res => res.id === idlogement.id)
                 dataid !== undefined ? setData(dataid) : navigate("/notfound")
             })
-    }, [idlogement.id, navigate])
+        document.title = `Kasa | ${data?.title}`;
+    }, [idlogement.id, navigate, data.title])
 
     return (
         <div className='housing'>

@@ -21,6 +21,7 @@ const Home = () => {
             .then(function (myJson) {
                 setData(myJson);
             });
+        document.title = 'Kasa | Accueil';
     }, [])
 
     return (

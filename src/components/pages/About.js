@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaAngleUp, FaAngleDown } from "react-icons/fa";
 import Collapse from 'react-collapse';
 const banner = require("../../assets/img/background-about.png");
@@ -10,6 +10,10 @@ const About = () => {
     const [collapse2, setCollapse2] = useState(false);
     const [collapse3, setCollapse3] = useState(false);
     const [collapse4, setCollapse4] = useState(false);
+
+    useEffect(() => {
+        document.title = 'Kasa | A propos';
+    }, []);
 
     return (
         <section>
