@@ -60,7 +60,12 @@
     }
 
     @include mobile {
+        display: flex;
+        flex-direction: column;
+        grid-gap: 0;
+        padding: 0;
         margin: 0;
+        margin: $margin-mobile;
         padding-top: 10px;
         background-color: white;
     }
@@ -99,7 +104,9 @@
         font-weight: 300;
 
         @include mobile {
-            bottom: 40px;
+            bottom: 50px;
+            margin-left: 10px;
+            margin-right: 80px;
         }
     }
 }
