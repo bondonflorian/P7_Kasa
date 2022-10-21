@@ -8,6 +8,7 @@
 $font: "Montserrat", sans-serif;
 $color-1: #FF6060;
 $color-2: #E3E3E3;
+$color-3: #f1b1b1;
 $color-footer: #000;
 $banner: #000;
 $color-white: #fff;
@@ -42,6 +43,19 @@ $margin-mobile: 0 20px;
 
 @mixin mobile {
     @media screen and (max-width: 768px) {
+        @content;
+    }
+
+}
+
+@mixin gridmax {
+    @media screen and (max-width: 1400px) {
+        @content;
+    }
+}
+
+@mixin gridmin {
+    @media screen and (min-width: 1440px) {
         @content;
     }
 }

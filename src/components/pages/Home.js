@@ -30,16 +30,16 @@ const Home = () => {
                 <p>Chez vous, partout et ailleurs</p>
             </div>
             <div className="card">
-                <div className="card__all">
-                    {data.map((item) => (
-                        <div className="card__location" key={item.id}>
-                            <Link to={"/housing-" + item.id} >
-                                <img src={item.cover} alt={item.title} />
-                                <h2>{item.title}</h2>
-                            </Link>
-                        </div>
-                    ))}
-                </div>
+                {/*                 <div className="card__all">
+                </div> */}
+                {data.map((item) => (
+                    <div className="card__location" key={item.id}>
+                        <Link to={"/housing-" + item.id} >
+                            <img src={item.cover} alt={item.title} />
+                            <h2>{item.title}</h2>
+                        </Link>
+                    </div>
+                ))}
             </div>
         </div>
     );

@@ -42,13 +42,22 @@
 }
 
 .card {
-    @include flexcenter;
-    justify-content: center;
-    /* flex-wrap: wrap; */
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
     background-color: $background;
-    padding: 25px 0;
-    border-radius: 25px;
     margin: $margin-page;
+    border-radius: 25px;
+    grid-gap: 50px;
+    padding: 40px 40px;
+
+    @include gridmax {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include gridmin {
+        grid-template-columns: repeat(3, 1fr);
+    }
 
     @include mobile {
         margin: 0;
@@ -56,21 +65,13 @@
         background-color: white;
     }
 
-    &__all {
-        display: flex;
-        flex-flow: wrap;
-        justify-content: space-between;
-        width: 90%;
-        /* TODO Régler le problème de mise en page lié à space-between */
-    }
-
     &__location {
-        position: relative;
         background: linear-gradient(180deg, rgba(255, 96, 96, 0) 0%, rgba(255, 96, 96, 0) 50%, rgb(0, 0, 0) 100%);
         border-radius: 10px;
         width: 340px;
         height: 340px;
-        margin: 25px;
+        /* margin: 25px 0 */
+        ;
 
         & img {
             position: relative;

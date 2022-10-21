@@ -71,7 +71,9 @@
             justify-content: center;
 
             &__currentindex {
-                color: black;
+                background: radial-gradient(circle, rgba(241, 177, 177, 1) 15%, rgba(255, 96, 96, 1) 40%);
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
 
                 &__slideindex {
                     color: $color-1;
