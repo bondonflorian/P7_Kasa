@@ -38,7 +38,6 @@ $margin-mobile: 0 20px;
 @mixin description {
     color: $color-1;
     font-size: 18px;
-    margin: 30px 25px 30px 15px;
 }
 
 @mixin mobile {
@@ -61,7 +60,6 @@ $margin-mobile: 0 20px;
 }
 
 @mixin collapseClose {
-    max-height: 0;
     width: 100%;
     margin-bottom: 30px;
     overflow: hidden;
@@ -70,7 +68,6 @@ $margin-mobile: 0 20px;
 
 @mixin collapseOpen {
     background-color: #F6F6F6;
-    max-height: 200px;
     height: auto;
     width: 100%;
     margin-bottom: 30px;

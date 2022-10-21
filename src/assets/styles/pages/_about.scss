@@ -57,8 +57,10 @@
     &__description {
         @include collapseClose;
 
+
         &__show {
             @include collapseOpen;
+            padding: 20px 0;
         }
     }
 
@@ -74,7 +76,7 @@
 
     & p {
         @include description;
-        padding: 0 20px 0 0;
+        margin: 0 20px;
 
         @include mobile {
             margin-right: 5px;
