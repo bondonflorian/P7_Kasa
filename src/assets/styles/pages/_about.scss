@@ -1,3 +1,12 @@
+section {
+    height: 100%;
+    flex-basis: 1;
+
+    @include mobile {
+        height: auto;
+    }
+}
+
 .page {
     display: flex;
     flex-direction: column;
@@ -11,12 +20,18 @@
     justify-content: center;
     height: 200px;
     margin: $margin-page;
+    margin-top: 0;
     border-radius: 25px;
 
     @include mobile {
         margin: $margin-mobile;
         height: 200px;
         border-radius: 10px;
+        margin-bottom: 20px;
+    }
+
+    @include tablette {
+        margin: $margin-tablette;
         margin-bottom: 20px;
     }
 
@@ -42,6 +57,10 @@
     margin-bottom: 50px;
 
     @include mobile {
+        width: 90%;
+    }
+
+    @include tablette {
         width: 90%;
     }
 

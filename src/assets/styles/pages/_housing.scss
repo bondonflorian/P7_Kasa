@@ -1,8 +1,18 @@
 .housing {
+    display: flex;
+    flex-direction: column;
     margin: $margin-page;
+    margin-top: 0;
+    height: 100%;
+    flex-basis: 1;
 
     @include mobile {
         margin: $margin-mobile;
+        height: auto;
+    }
+
+    @include tablette {
+        margin: $margin-tablette;
     }
 
     &__banner {
@@ -22,12 +32,18 @@
                 border-radius: 10px;
             }
 
+            @include tablette {
+                height: 350px;
+                margin-top: 0;
+                margin-bottom: 10px;
+            }
+
         }
 
         &__arrowleft {
             position: absolute;
             font-size: 100px;
-            top: 260px;
+            top: 300px;
             color: $color-white;
             cursor: pointer;
 
@@ -35,13 +51,19 @@
                 font-size: 50px;
                 top: 190px;
             }
+
+            @include tablette {
+                font-size: 80px;
+                top: 240px;
+            }
+
         }
 
         &__arrowright {
             position: absolute;
             font-size: 100px;
             right: 100px;
-            top: 260px;
+            top: 300px;
             color: $color-white;
             cursor: pointer;
 
@@ -49,6 +71,12 @@
                 font-size: 50px;
                 top: 190px;
                 right: 20px;
+            }
+
+            @include tablette {
+                font-size: 80px;
+                top: 240px;
+                right: 30px;
             }
         }
 
@@ -70,11 +98,10 @@
         &__bulletpoint {
             display: flex;
             justify-content: center;
+            z-index: 2;
 
             &__currentindex {
-                background: radial-gradient(circle, rgba(241, 177, 177, 1) 15%, rgba(255, 96, 96, 1) 40%);
-                background-clip: text;
-                -webkit-text-fill-color: transparent;
+                color: #f1b1b1;
 
                 &__slideindex {
                     color: $color-1;
@@ -90,6 +117,10 @@
                 @include mobile {
                     font-size: 16px;
                     margin-top: -20px;
+                }
+
+                @include tablette {
+                    margin-top: -35px;
                 }
             }
 
@@ -113,6 +144,10 @@
         @include mobile {
             width: 90%;
             margin-top: 15px;
+        }
+
+        @include tablette {
+            font-size: 14px;
         }
 
         & h1,
@@ -142,6 +177,11 @@
                 margin-bottom: 0;
                 margin-left: 10px;
             }
+
+            @include tablette {
+                width: 44px;
+                height: 44px;
+            }
         }
 
         &__autor {
@@ -150,7 +190,6 @@
 
             & p {
                 width: 90px;
-
             }
         }
     }
@@ -160,7 +199,12 @@
         font-size: 14px;
         margin-bottom: 15px;
         font-weight: 300;
+
+        @include tablette {
+            font-size: 14px;
+        }
     }
+
 
     &__user {
         display: flex;
@@ -176,15 +220,27 @@
             margin: 10px 0;
         }
 
+        @include tablette {
+            flex-direction: row-reverse;
+            width: 100%;
+            height: 100%;
+            justify-content: space-between;
+            margin: 5px 0;
+        }
+
         & p {
             color: $color-1;
             margin-bottom: 5px;
             margin-right: 10px;
-            padding-left: 30px;
+            padding-left: 19px;
             text-align: right;
 
             @include mobile {
                 margin: 0;
+                font-size: 14px;
+            }
+
+            @include tablette {
                 font-size: 14px;
             }
         }
@@ -199,7 +255,13 @@
         @include mobile {
             flex-direction: column;
             align-items: flex-start;
-            height: 100%;
+            height: 15%;
+        }
+
+        @include tablette {
+            flex-direction: column;
+            align-items: flex-start;
+            height: 10%;
         }
 
         &__filter {
@@ -235,8 +297,13 @@
 
             @include mobile {
                 flex-direction: column;
-                margin: 0;
+                margin-top: 0;
+            }
 
+            @include tablette {
+                flex-direction: column;
+                margin-top: 0;
+                margin-bottom: 20px;
             }
 
             &__description {
@@ -249,6 +316,11 @@
                 @include mobile {
                     margin-bottom: 30px;
                     width: 100%;
+                }
+
+                @include tablette {
+                    width: 100%;
+                    margin-bottom: 50px;
                 }
 
                 &__title {
@@ -285,11 +357,25 @@
                         width: 100%;
                         height: 250px;
 
+                        @include tablette {
+                            height: auto;
+                            padding-bottom: 20px;
+                        }
+
+                        @include mobile {
+                            height: auto;
+                            padding-bottom: 20px;
+                        }
+
                         & p {
                             @include description;
                             padding: 0 20px 0 20px;
                             font-size: 17px;
                             margin: 0;
+
+                            @include mobile {
+                                font-size: 14px;
+                            }
                         }
 
                     }
@@ -316,6 +402,10 @@
         font-size: 18px;
     }
 
+    @include tablette {
+        font-size: 20px;
+    }
+
     &__grey {
         font-size: 24px;
         margin-left: 5px;
@@ -323,6 +413,10 @@
 
         @include mobile {
             font-size: 18px;
+        }
+
+        @include tablette {
+            font-size: 20px;
         }
     }
 }

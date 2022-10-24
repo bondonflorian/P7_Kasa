@@ -34,12 +34,12 @@ const Home = () => {
                 {/*                 <div className="card__all">
                 </div> */}
                 {data.map((item) => (
-                    <div className="card__location" key={item.id}>
-                        <Link to={"/housing-" + item.id} >
+                    <Link to={"/housing-" + item.id} key={item.id}>
+                        <div className="card__location">
                             <img src={item.cover} alt={item.title} />
                             <h2>{item.title}</h2>
-                        </Link>
-                    </div>
+                        </div>
+                    </Link>
                 ))}
             </div>
         </div>

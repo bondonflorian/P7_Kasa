@@ -7,6 +7,10 @@
         margin: 20px;
     }
 
+    @include tablette {
+        margin: 30px;
+    }
+
     &__logo {
         width: 150px;
         height: 50px;
@@ -26,6 +30,12 @@
                 text-transform: uppercase;
             }
 
+            @include tablette {
+                margin: 15px 0 0 40px;
+                text-transform: uppercase;
+                font-size: 14px;
+            }
+
             &__selected {
                 text-decoration-line: underline;
                 font-size: 18px;
@@ -37,6 +47,12 @@
                     margin: 0 0 0 15px;
                     font-size: 12px;
                     text-transform: uppercase;
+                }
+
+                @include tablette {
+                    margin: 15px 0 0 40px;
+                    text-transform: uppercase;
+                    font-size: 14px;
                 }
             }
 
