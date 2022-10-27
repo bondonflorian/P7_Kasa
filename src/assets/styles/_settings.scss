@@ -1,11 +1,8 @@
-/* Font */
-@font-face {
-    font-family: "Montserrat";
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
-}
+/* TODO Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
 
-/* Variable */
-$font: "Montserrat", sans-serif;
+/* TODO Variable */
+$font: "Montserrat";
 $color-1: #FF6060;
 $color-2: #E3E3E3;
 $color-3: #f1b1b1;
@@ -17,7 +14,7 @@ $margin-page: 40px 100px;
 $margin-mobile: 0 20px;
 $margin-tablette: 0 30px;
 
-/* Mixin */
+/* TODO Mixin */
 @mixin flexcenter {
     display: flex;
     align-items: center;
@@ -81,7 +78,7 @@ $margin-tablette: 0 30px;
     transition: all 0.4s linear;
 }
 
-/* Paramètre généraux */
+/* TODO Paramètre généraux */
 body {
     font-family: $font;
     font-weight: 300;
@@ -90,6 +87,7 @@ body {
 li {
     list-style-type: none;
     color: $color-1;
+    font-weight: 500;
 }
 
 * {

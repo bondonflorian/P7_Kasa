@@ -31,8 +31,7 @@ const Home = () => {
                 <p>Chez vous, partout et ailleurs</p>
             </div>
             <div className="card">
-                {/*                 <div className="card__all">
-                </div> */}
+
                 {data.map((item) => (
                     <Link to={"/housing-" + item.id} key={item.id}>
                         <div className="card__location">
@@ -41,6 +40,7 @@ const Home = () => {
                         </div>
                     </Link>
                 ))}
+
             </div>
         </div>
     );

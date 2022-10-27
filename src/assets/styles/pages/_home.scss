@@ -48,6 +48,10 @@
             padding-right: 140px;
             padding-left: 10px;
         }
+
+        @include tablette {
+            font-size: 38px;
+        }
     }
 }
 
@@ -124,6 +128,10 @@
             bottom: 50px;
             margin-left: 10px;
             margin-right: 80px;
+        }
+
+        @include tablette {
+            font-size: 16px;
         }
     }
 }

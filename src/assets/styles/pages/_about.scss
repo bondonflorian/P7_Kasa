@@ -71,6 +71,11 @@ section {
         padding: 0 25px 0 15px;
         cursor: pointer;
 
+        @include mobile {
+            height: 30px;
+            padding: 0 2px 0 15px;
+        }
+
     }
 
     &__description {
@@ -87,10 +92,18 @@ section {
         font-size: 20px;
         color: $color-white;
         font-weight: 300;
+
+        @include mobile {
+            font-size: 13px;
+        }
     }
 
     &__arrow {
         @include arrow;
+
+        @include mobile {
+            font-size: 20px;
+        }
     }
 
     & p {
@@ -99,6 +112,7 @@ section {
 
         @include mobile {
             margin-right: 5px;
+            font-size: 12px;
         }
     }
 }
