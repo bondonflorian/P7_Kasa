@@ -397,6 +397,10 @@
 
 .housing__arrow {
     @include arrow;
+
+    @include mobile {
+        font-size: 20px;
+    }
 }
 
 .star {

@@ -59,7 +59,7 @@ const Housing = () => {
                 <div className="housing__filterblock__details__description">
                     <div className="housing__filterblock__details__description__title" onClick={() => setCollapse1(!collapse1)}>
                         <h2>Description</h2>
-                        {(collapse1 ? <FaAngleUp className='housing__arrow' /> : <FaAngleDown className='about__arrow' />)}
+                        {(collapse1 ? <FaAngleUp className='housing__arrow' /> : <FaAngleDown className='housing__arrow' />)}
                     </div>
                     <div className={(collapse1 ? "housing__filterblock__details__description__text__show" : "housing__filterblock__details__description__text")}>
                         <Collapse isOpened={collapse1}>
@@ -70,7 +70,7 @@ const Housing = () => {
                 <div className="housing__filterblock__details__description">
                     <div className="housing__filterblock__details__description__title" onClick={() => setCollapse2(!collapse2)}>
                         <h2>Equipements</h2>
-                        {(collapse2 ? <FaAngleUp className='housing__arrow' /> : <FaAngleDown className='about__arrow' />)}
+                        {(collapse2 ? <FaAngleUp className='housing__arrow' /> : <FaAngleDown className='housing__arrow' />)}
                     </div>
                     <div className={(collapse2 ? "housing__filterblock__details__description__text__show" : "housing__filterblock__details__description__text")}>
                         <Collapse isOpened={collapse2}>
