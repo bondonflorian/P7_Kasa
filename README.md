@@ -9,12 +9,12 @@ Ce projet est développé pour la partie front-end avec React.JS et la mise en p
 ## Les routes de mon projet dans App.js
 
 ```bash
-        <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/housing-:id" element={<Housing />} />
-        <Route path="*" element={<Notfound />} />
-      </Routes>
+<Routes>
+  <Route exact path="/" element={<Home />} />
+  <Route path="/about" element={<About />} />
+  <Route path="/housing-:id" element={<Housing />} />
+  <Route path="*" element={<Notfound />} />
+</Routes>
 ```
 
 
