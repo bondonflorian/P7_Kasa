@@ -1,0 +1,27 @@
+.collapse {
+    &__description {
+        @include collapseClose;
+
+
+        &__show {
+            @include collapseOpen;
+            padding: 20px 0;
+        }
+    }
+
+    &__arrow {
+        @include mobile {
+            width: 15px;
+            height: 9px;
+            margin-right: 3px;
+        }
+    }
+
+    &__arrow {
+        @include arrow;
+
+        @include mobile {
+            font-size: 20px;
+        }
+    }
+}

@@ -51,10 +51,9 @@ section {
 }
 
 .about {
-    @include flexcenter;
+    display: flex;
     flex-direction: column;
     width: 75%;
-    margin-bottom: 50px;
 
     @include mobile {
         width: 90%;
@@ -64,29 +63,23 @@ section {
         width: 90%;
     }
 
-    &__title {
-        @include flexcenter;
-        @include deroulant;
-        width: 100%;
-        padding: 0 25px 0 15px;
-        cursor: pointer;
+    &__block {
+        margin-bottom: 20px;
 
-        @include mobile {
-            height: 30px;
-            padding: 0 2px 0 15px;
-        }
+        &__title {
+            @include flexcenter;
+            @include deroulant;
+            width: 100%;
+            padding: 0 25px 0 15px;
+            cursor: pointer;
 
-    }
-
-    &__description {
-        @include collapseClose;
-
-
-        &__show {
-            @include collapseOpen;
-            padding: 20px 0;
+            @include mobile {
+                height: 30px;
+                padding: 0 2px 0 15px;
+            }
         }
     }
+
 
     & h1 {
         font-size: 20px;
@@ -98,17 +91,9 @@ section {
         }
     }
 
-    &__arrow {
-        @include arrow;
-
-        @include mobile {
-            font-size: 20px;
-        }
-    }
-
     & p {
         @include description;
-        margin: 0 20px;
+        padding: 20px;
 
         @include mobile {
             margin-right: 5px;

@@ -50,7 +50,7 @@ const ImageSlider = () => {
             </div>
             <div className="housing__banner__bulletpoint">
                 {data.map((key, slideIndex) => (
-                    data.length <= 1 ? <span className="housing__banner__bulletpoint__hidden"></span> : <span key={slideIndex} className={currentIndex === slideIndex ? "housing__banner__bulletpoint__currentindex" : "housing__banner__bulletpoint__currentindex__slideindex"} onClick={() => goToSlide(slideIndex)}>●</span>
+                    data.length <= 1 ? <span className="housing__banner__bulletpoint__hidden" key={slideIndex}></span> : <span key={slideIndex} className={currentIndex === slideIndex ? "housing__banner__bulletpoint__currentindex" : "housing__banner__bulletpoint__currentindex__slideindex"} onClick={() => goToSlide(slideIndex)}>●</span>
                 ))}
             </div>
             {data.length <= 1 ? "" : <p className="housing__banner__index">{currentIndex + 1}/{data.length}</p>}

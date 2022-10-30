@@ -238,6 +238,7 @@
             @include mobile {
                 margin: 0;
                 font-size: 12px;
+                padding-left: 30px;
             }
 
             @include tablette {
@@ -251,11 +252,13 @@
         align-items: center;
         justify-content: space-between;
         height: 20px;
+        margin-bottom: 10px;
 
         @include mobile {
             flex-direction: column;
             align-items: flex-start;
             height: 20%;
+            margin-bottom: 0;
         }
 
         @include tablette {
@@ -264,9 +267,23 @@
             height: 10%;
         }
 
+        &__notice {
+            & img {
+                width: 30px;
+                height: 30px;
+                margin-left: 5px;
+
+                @include mobile {
+                    width: 15px;
+                    height: 15px;
+                }
+            }
+        }
+
         &__filter {
             display: flex;
             flex-wrap: wrap;
+            margin-top: 10px;
 
             & p {
                 display: flex;
@@ -283,6 +300,7 @@
                 @include mobile {
                     border-radius: 5px;
                     margin-bottom: 5px;
+                    margin-top: 0;
                 }
             }
         }
@@ -298,6 +316,7 @@
             @include mobile {
                 flex-direction: column;
                 margin-top: 0;
+                font-size: 12px;
             }
 
             @include tablette {
@@ -312,6 +331,11 @@
                 justify-content: space-between;
                 width: 45%;
                 margin-bottom: 20px;
+
+                & p {
+                    color: $color-1;
+                    padding: 20px;
+                }
 
                 @include mobile {
                     margin-bottom: 30px;
@@ -329,6 +353,7 @@
                     height: 52px;
                     width: 100%;
                     padding: 0 25px 0 15px;
+                    border-radius: 10px;
                     cursor: pointer;
 
                     @include mobile {
@@ -337,7 +362,7 @@
                         padding: 0 2px 0 15px;
                     }
 
-                    & h2 {
+                    & h1 {
                         font-size: 16px;
                         color: $color-white;
                         font-weight: 300;
@@ -358,19 +383,17 @@
                         display: flex;
                         flex-direction: column;
                         margin: 0;
-                        padding: 30px 0 0 0;
                         width: 100%;
-                        height: 250px;
+                        font-weight: 300;
+                        padding-bottom: 5px;
 
                         @include tablette {
                             height: auto;
-                            padding-bottom: 20px;
                         }
 
                         @include mobile {
                             height: auto;
-                            padding-bottom: 20px;
-                            padding: 20px 0 10px 0;
+                            font-size: 12px;
                         }
 
                         & p {
@@ -391,42 +414,6 @@
                     }
                 }
             }
-        }
-    }
-}
-
-.housing__arrow {
-    @include arrow;
-
-    @include mobile {
-        font-size: 20px;
-    }
-}
-
-.star {
-    font-size: 24px;
-    margin-left: 5px;
-    color: $color-1;
-
-    @include mobile {
-        font-size: 18px;
-    }
-
-    @include tablette {
-        font-size: 20px;
-    }
-
-    &__grey {
-        font-size: 24px;
-        margin-left: 5px;
-        color: $color-2;
-
-        @include mobile {
-            font-size: 18px;
-        }
-
-        @include tablette {
-            font-size: 20px;
         }
     }
 }
