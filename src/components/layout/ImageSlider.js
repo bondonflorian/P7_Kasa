@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
+
+const arrowright = require("../../assets/img/arrow_right.png");
+const arrowleft = require("../../assets/img/arrow_left.png");
 
 
 const ImageSlider = () => {
@@ -44,9 +46,9 @@ const ImageSlider = () => {
     return (
         <>
             <div className="housing__banner">
-                {data.length <= 1 ? "" : <FaAngleLeft onClick={goToPrevious} className='housing__banner__arrowleft' />}
-                {data.length <= 1 ? "" : <FaAngleRight onClick={goToNext} className='housing__banner__arrowright' />}
-                <img src={data?.[currentIndex]} key={data.length} alt={data.length} />
+                {data.length <= 1 ? "" : <img src={arrowleft} alt="Flêche de gauche" onClick={goToPrevious} className='housing__banner__arrowleft' />}
+                {data.length <= 1 ? "" : <img src={arrowright} alt="Flêche de droite" onClick={goToNext} className='housing__banner__arrowright' />}
+                <img src={data?.[currentIndex]} key={data.length} alt={data.length} className="housing__banner__banner" />
             </div>
             <div className="housing__banner__bulletpoint">
                 {data.map((key, slideIndex) => (
