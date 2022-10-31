@@ -2,10 +2,33 @@
     &__description {
         @include collapseClose;
 
+        &__housing {
+            @include collapseClose;
+            height: 250px;
+            transition: all 0.8s linear;
+
+            @include mobile {
+                height: 100%;
+            }
+
+            @include tablette {
+                height: auto;
+
+            }
+        }
 
         &__show {
             @include collapseOpen;
+            height: 100%;
             padding: 20px 0;
+
+            @include mobile {
+                height: auto;
+            }
+
+            @include tablette {
+                height: auto;
+            }
         }
     }
 
